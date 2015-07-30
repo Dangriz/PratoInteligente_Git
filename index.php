@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Início</title>
+        <title>InÃ­cio</title>
         <link rel="shortcut icon" href="imagens/onlinelogomaker-061115-1725.png">
 
         <meta charset="UTF-8">
@@ -24,7 +24,7 @@ and open the template in the editor.
             <ul>
 
 
-                <li><a href="index.php">Início</a></li>
+                <li><a href="index.php">InÃ­cio</a></li>
                 <li><a href="about.php">Sobre</a></li>
                 <li><a href="equipe.php">Equipe</a></li>
                 <li><a href="contato.php">Contato</a></li>
@@ -43,8 +43,8 @@ and open the template in the editor.
                     
 
                     <td>
-                        <label for="inputEmail" class="sr-only">Usuário</label>
-                        <input type="text" id="inputEmail" class="form-control" placeholder="Nome do usuário" 
+                        <label for="inputEmail" class="sr-only">Usuï¿½rio</label>
+                        <input type="text" id="inputEmail" class="form-control" placeholder="Nome do usuï¿½rio" 
                                required autofocus name="txtusuario">
                         <label for="inputPassword" class="sr-only">Senha</label>
                         <input type="password" id="inputPassword" class="form-control" placeholder="Informe sua senha" 
@@ -60,20 +60,19 @@ and open the template in the editor.
         </div>
 
 
-        <div class="rodape"><h4>Copyright © Equipe Prato Inteligente</h4> </div>
+        <div class="rodape"><h4>Copyright ï¿½ Equipe Prato Inteligente</h4> </div>
         <?php
-        $conexao = mysql_connect('31.170.165.111', 'u963154851_canti', 'Pr@t01Ntelig3n7e');
+        $conexao = mysql_connect('mysql.hostinger.com.br', 'u963154851_canti', 'Pr@t01Ntelig3n7e');
         if (!$conexao) {
-            die('Conexão cancelada:' . mysql_error());
+            die('ConexÃ£o cancelada:' . mysql_error());
         } echo '';
         $banco = mysql_select_db('u963154851_pinct', $conexao);
 
-        /* $consulta = mysql_query("select * from usuarios");
+   $consulta = mysql_query("select * from usuarios");
           while($resultado = mysql_fetch_array($consulta)){
           echo $resultado['nome'];
-          } */
+      
         if (isset($_POST['btnenviar'])) {
-            echo 'Você clicou em mim';
             $usuario = $_POST['txtusuario'];
             $senha = md5($_POST['txtsenha']);
             $consulta = mysql_query("select * from usuarios where login='$usuario' and senha='$senha'");
@@ -84,6 +83,7 @@ and open the template in the editor.
                 echo 'Acesso Negado';
             }
         }
+          }
         ?>
     </body>
 </html>
