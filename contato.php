@@ -67,7 +67,7 @@ Autor: Robson Gilmar
         <div class="rodape"><h4>Copyright © Equipe Prato Inteligente</h4> </div>
         <?php
         /*
-          Data: 23/06/2015
+          Data: 12/08/2015
          */
         
         ?>
